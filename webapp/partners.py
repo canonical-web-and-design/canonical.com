@@ -11,6 +11,7 @@ class Partners:
         "iot": "programme__name=Internet%20of%20Things&featured=true",
         "gsi": "programme__name=Global%20System%20Integrators&featured=true",
         "public-cloud": "programme__name=Public%20Cloud&featured=true",
+        "software": "programme__name=ISV",
     }
 
     def __init__(self, session):
@@ -55,6 +56,7 @@ class Partners:
             "Snapcraft": self._get(
                 "programme__name=Internet%20of%20Things&featured=true"
             ),
+            "Software": self._get("programme__name=ISV"),
             "Training": self._get("programme__name=Desktop&featured=true"),
         }
 

@@ -154,11 +154,11 @@
     );
   }
 
-  // Check if element shold be filtered
+  // Check if element should be filtered
   function filterCheck(filterText) {
     var match = false;
     filters.forEach((filter) => {
-      if (filterText.includes(filter) && !match) {
+      if (filterText.includes(filter.toLowerCase()) && !match) {
         match = true;
       }
     });
@@ -182,7 +182,7 @@
     const queryFilters = urlParams.get("filters");
     if (queryFilters) {
       queryFilters.split(",").forEach((filter) => {
-        var checkboxObject = document.querySelector("#" + filter);
+        var checkboxObject = document.querySelector("#" + filter.toLocaleLowerCase());
         if (checkboxObject) {
           checkboxObject.checked = true;
         }

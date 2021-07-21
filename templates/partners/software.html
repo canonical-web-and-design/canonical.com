@@ -1,0 +1,121 @@
+{% extends 'base_index.html' %}
+
+{% block meta_copydoc %}https://docs.google.com/document/d/1rnp14t9u065_1bGRSXWyvKTHMUIMjpLjQAKe-zbPCDI/edit#heading=h.1kcf4pjl5zqw{% endblock %}
+
+{% block title %}Software partner programme | Partners{% endblock %}
+
+{% block meta_description %}Canonical's Software Partner Programme helps ISV and Open Source Partners detail how their software works with Canonical's products, to ensure that the products are deployed in a precise manner for optimal performance and a great user experience.{% endblock %}
+
+{% block content %}
+<section class="p-strip--image is-dark">
+  <div class="p-strip--suru-top">
+    <div class="row">
+      <div class="col-7">
+        <h1>Software partner programme</h1>
+        <p>Canonical's Software Partner Programme helps ISV and Open Source Partners detail how their software works with Canonical's products, to ensure that the products are deployed in a precise manner for optimal performance and a great user experience. </p>
+        <a href="/contact-us" class="p-button--positive">Become a partner</a>
+      </div>
+      <div class="col-5 u-hide--small u-align--center u-vertically-center">
+        <div>
+          <img src="https://assets.ubuntu.com/v1/aba9cfb9-Software_partner_1.svg" width="120" height="120" alt="">
+          <img src="https://assets.ubuntu.com/v1/27ed2e78-Software_partner_2.svg" width="120" height="120" alt="">
+          <img src="https://assets.ubuntu.com/v1/77c3e32f-Software_partner_3.svg" width="120" height="120" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .p-strip--suru-top {
+    background-image:
+      linear-gradient(to top right, #fff 0%, #fff 49%, transparent 50%),
+      linear-gradient(to top right, rgba(74, 24, 60, 0) 0%, rgba(74, 24, 60, 0) 49.9%, rgba(74, 24, 60, 0.3) 50%, rgba(74, 24, 60, 0.3) 100%),
+      linear-gradient(to bottom right, rgba(210, 180, 202, 0.05) 0%, rgba(210, 180, 202, 0.05) 49.9%, rgba(210, 180, 202, 0) 50%, rgba(210, 180, 202, 0) 100%),
+      linear-gradient(216deg, #E95420 0%, #5E2750 33%, #2C001E 71%);
+    background-repeat: no-repeat;
+    background-size: 110% 10%, 70% 100%, 100% 40%, 100% 100%;
+    background-position: bottom -0.2px left, top right, top left;
+    padding-bottom: 6rem;
+    padding-top: 3rem;
+  }
+
+  @media (max-width: 772px) {
+    .p-strip--suru-top {
+      background-image:
+        linear-gradient(to top right, #fff 0%, #fff 49%, transparent 50%),
+        linear-gradient(to top right, rgba(74, 24, 60, 0) 0%, rgba(74, 24, 60, 0) 49.9%, rgba(74, 24, 60, 0.3) 50%, rgba(74, 24, 60, 0.3) 100%),
+        linear-gradient(to bottom right, rgba(210, 180, 202, 0.05) 0%, rgba(210, 180, 202, 0.05) 49.9%, rgba(210, 180, 202, 0) 50%, rgba(210, 180, 202, 0) 100%),
+        linear-gradient(216deg, #E95420 0%, #5E2750 33%, #2C001E 71%);
+      background-repeat: no-repeat;
+      background-size: 105% 5%, 70% 100%, 100% 40%, 100% 100%;
+      background-position: bottom -1px left, top right, top left;
+    }
+  }
+</style>
+
+{% if partners %}
+<section class="p-strip is-deep">
+  <div class="u-fixed-width u-align--center">
+    <h4 class="p-muted-heading u-no-max-width">Some of our software partners</h4>
+  </div>
+  <div class="u-fixed-width">
+    <ul class="p-inline-images u-no-margin--bottom">
+      {% for partner in partners %}
+      <li class="p-inline-images__item">
+        <img class="p-inline-images__logo" src="{{ partner.logo }}" style="object-fit: cover; min-width: 6rem; max-height: 6rem;" alt="{{ partner.slug}}">
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="u-align-text--center"><a href="/partners/find-a-partner?filters=isv">See all of our software partners&nbsp;&rsaquo;</a></p>
+  </div>
+</section>
+{% endif %}
+
+<section class="p-strip--light is-deep">
+  <div class="row">
+    <div class="col-8">
+      <h2>What's included</h2>
+      <p>Canonical's products power a broad range of Software Partners as they solve the application and infrastructure challenges facing business and society today, from products powering the world's webservers, through the premium 3D computer graphics software toolset to the Robotics platform of choice in research, education and product development &mdash; Canonical works behind the scenes to make our Software Partners' solutions reality.</p>
+    </div>
+    <div class="col-4 u-hide--small u-align--center u-vertically-center">
+      <img src="https://assets.ubuntu.com/v1/69aaa876-compliance.svg" width="150" height="150" alt="">
+    </div>
+  </div>
+  <div class="row p-divider">
+    <div class="u-no-fixed-width">
+      <h4>Why partner with Canonical?</h4>
+    </div>
+    <div class="col-6">
+      <h5>Benefits</h5>
+      <ul class="p-list">
+        <li class="p-list__item is-ticked">Be featured as a Software Partner on the Canonical website</li>
+        <li class="p-list__item is-ticked">Showcase your software products and platforms as <strong>Validated with Ubuntu</strong> and have them listed on Canonical&#39;s website</li>
+        <li class="p-list__item is-ticked">Use our trademarks and logos on your own website</li>
+        <li class="p-list__item is-ticked">Promote your software as Validated with Ubuntu</li>
+        <li class="p-list__item is-ticked">Enjoy co-marketing opportunities including joint events, videos, blogs, PR and demos to potential customers</li>
+        <li class="p-list__item is-ticked">Validate unlimited product combinations</li>
+        <li class="p-list__item is-ticked"><a href="/partners/become-a-partner">Join free</a></li>
+      </ul>
+    </div>
+    <div class="col-6 p-divider__block">
+      <h5>Premium benefits</h5>
+      <ul class="p-list">
+        <li class="p-list__item is-ticked">Work with Canonical for Custom Image Builds (cloud-specific, FIPS, CIS-hardened, Minimal, PCI-ready), and enjoy ongoing maintenance across your software lifecycle</li>
+        <li class="p-list__item is-ticked">Test your product using Canonical's OpenStack and Kubernetes Partner Cloud, with Field Engineering expertise on hand to assist</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-8">
+      <p>
+        <a href="/partners/become-a-partner" class="p-button--positive">
+          Become a partner
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+{% include 'partial/_partners-footer.html' %}
+
+{% endblock %}
